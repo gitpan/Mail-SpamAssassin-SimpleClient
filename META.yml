@@ -1,0 +1,13 @@
+author: 'Ricardo Signes <rjbs@cpan.org>'
+distribution_type: module
+generated_by: Module::Install version 0.54
+license: perl
+name: Mail-SpamAssassin-SimpleClient
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  Email::MIME: 1
+  Mail::SpamAssassin: 3
+version: 0.001
