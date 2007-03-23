@@ -14,13 +14,13 @@ Mail::SpamAssassin::SimpleClient - easy client to SpamAssassin's spamd
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
- $Id: /my/pep/Mail-SpamAssassin-SimpleClient/trunk/lib/Mail/SpamAssassin/SimpleClient.pm 2557 2007-03-22T03:04:17.741884Z rjbs  $
+ $Id: /my/pep/Mail-SpamAssassin-SimpleClient/trunk/lib/Mail/SpamAssassin/SimpleClient.pm 31190 2007-03-23T12:48:31.314592Z rjbs  $
 
 =cut
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 
 =head1 SYNOPSIS
 

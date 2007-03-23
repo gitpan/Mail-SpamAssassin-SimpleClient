@@ -13,7 +13,7 @@ Mail::SpamAssassin::SimpleClient::Result - the results of checking a message
 
 version 0.001
 
- $Id: /my/pep/Mail-SpamAssassin-SimpleClient/trunk/lib/Mail/SpamAssassin/SimpleClient/Result.pm 2557 2007-03-22T03:04:17.741884Z rjbs  $
+ $Id: /my/pep/Mail-SpamAssassin-SimpleClient/trunk/lib/Mail/SpamAssassin/SimpleClient/Result.pm 31149 2007-03-22T20:07:36.863212Z rjbs  $
 
 =cut
 
