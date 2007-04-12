@@ -11,13 +11,13 @@ Mail::SpamAssassin::SimpleClient::Result - the results of checking a message
 
 =head1 VERSION
 
-version 0.001
+version 0.004
 
- $Id: /my/pep/Mail-SpamAssassin-SimpleClient/trunk/lib/Mail/SpamAssassin/SimpleClient/Result.pm 31149 2007-03-22T20:07:36.863212Z rjbs  $
+ $Id: /my/pep/Mail-SpamAssassin-SimpleClient/trunk/lib/Mail/SpamAssassin/SimpleClient/Result.pm 31400 2007-04-12T23:45:52.621875Z rjbs  $
 
 =cut
 
-our $VERSION = '0.001';
+our $VERSION = '0.004';
 
 =head1 METHODS
 
@@ -96,6 +96,16 @@ sub test_scores {
   my ($self) = @_;
 
   return %{ $self->{tests} };
+}
+
+=head2 email
+
+This method returns the email object included in the response.
+
+=cut
+
+sub email {
+  $_[0]->{response_email}
 }
 
 =head1 AUTHOR
