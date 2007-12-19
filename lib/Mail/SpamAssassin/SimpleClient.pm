@@ -14,13 +14,13 @@ Mail::SpamAssassin::SimpleClient - easy client to SpamAssassin's spamd
 
 =head1 VERSION
 
-version 0.005
+version 0.006
 
- $Id: SimpleClient.pm 817 2007-09-17 13:28:12Z rjbs@cpan.org $
+ $Id: SimpleClient.pm 831 2007-10-29 00:43:18Z rjbs@cpan.org $
 
 =cut
 
-our $VERSION = '0.005';
+our $VERSION = '0.006';
 
 =head1 SYNOPSIS
 
@@ -138,11 +138,12 @@ sub check {
     my ($report) = ($response_email->parts)[0];
 
     my $past_header;
-    for my $line (split /\n/, $report->body) {
+    LINE: for my $line (split /\n/, $report->body) {
       next if not($past_header) and not($line =~ /^\s*---- -/);
       $past_header = 1, next if not $past_header;
 
       my ($score, $name) = $line =~ /\s*(-?[\d.]+)\s+(\S+)/;
+      next LINE unless defined $name;
       $test_score{ $name } = $score;
     }
   }
