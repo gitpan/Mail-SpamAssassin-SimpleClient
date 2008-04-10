@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use 5.006;
 
 package Mail::SpamAssassin::SimpleClient;
 
@@ -14,13 +15,13 @@ Mail::SpamAssassin::SimpleClient - easy client to SpamAssassin's spamd
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
- $Id: SimpleClient.pm 831 2007-10-29 00:43:18Z rjbs@cpan.org $
+ $Id: SimpleClient.pm 909 2008-04-10 02:36:57Z rjbs@cpan.org $
 
 =cut
 
-our $VERSION = '0.006';
+our $VERSION = '0.007';
 
 =head1 SYNOPSIS
 

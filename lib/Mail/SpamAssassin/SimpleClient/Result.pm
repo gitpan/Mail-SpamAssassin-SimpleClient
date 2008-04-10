@@ -11,13 +11,13 @@ Mail::SpamAssassin::SimpleClient::Result - the results of checking a message
 
 =head1 VERSION
 
-version 0.006
+version 0.007
 
- $Id: Result.pm 685 2007-04-12 23:47:07Z rjbs@cpan.org $
+ $Id: Result.pm 909 2008-04-10 02:36:57Z rjbs@cpan.org $
 
 =cut
 
-our $VERSION = '0.006';
+our $VERSION = '0.007';
 
 =head1 METHODS
 
