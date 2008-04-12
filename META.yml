@@ -15,5 +15,4 @@ no_index:
 requires:
   Email::MIME: 1
   Mail::SpamAssassin: 3
-tests: 't/*.t xt/*.t'
-version: 0.007
+version: 0.008
