@@ -1,18 +1,155 @@
 ---
+abstract: "easy client to SpamAssassin's spamd"
 author:
   - 'Ricardo Signes <rjbs@cpan.org>'
-distribution_type: module
-generated_by: 'Module::Install version 0.71'
+build_requires:
+  Email::Simple: 0
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.31
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.101612, CPAN::Meta::Converter version 2.101600'
 license: perl
 meta-spec:
-  url: http://module-build.sourceforge.net/META-spec-v1.3.html
-  version: 1.3
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
 name: Mail-SpamAssassin-SimpleClient
-no_index:
-  directory:
-    - inc
-    - t
 requires:
-  Email::MIME: 1
-  Mail::SpamAssassin: 3
-version: 0.008
+  Carp: 0
+  Email::MIME: 0
+  Mail::SpamAssassin::Client: 0
+  perl: 5.006
+resources:
+  repository: git://git.codesimply.com/Mail-SpamAssassin-SimpleClient.git
+version: 0.101610
+x_Dist_Zilla:
+  plugins:
+    -
+      class: Dist::Zilla::Plugin::GatherDir
+      name: '@RJBS/@Basic/GatherDir'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::PruneCruft
+      name: '@RJBS/@Basic/PruneCruft'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::ManifestSkip
+      name: '@RJBS/@Basic/ManifestSkip'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::MetaYAML
+      name: '@RJBS/@Basic/MetaYAML'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::License
+      name: '@RJBS/@Basic/License'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::Readme
+      name: '@RJBS/@Basic/Readme'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::ExtraTests
+      name: '@RJBS/@Basic/ExtraTests'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::ExecDir
+      name: '@RJBS/@Basic/ExecDir'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::ShareDir
+      name: '@RJBS/@Basic/ShareDir'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::MakeMaker
+      name: '@RJBS/@Basic/MakeMaker'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::Manifest
+      name: '@RJBS/@Basic/Manifest'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::TestRelease
+      name: '@RJBS/@Basic/TestRelease'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::ConfirmRelease
+      name: '@RJBS/@Basic/ConfirmRelease'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::UploadToCPAN
+      name: '@RJBS/@Basic/UploadToCPAN'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::AutoPrereq
+      name: '@RJBS/AutoPrereq'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::AutoVersion
+      name: '@RJBS/AutoVersion'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::PkgVersion
+      name: '@RJBS/PkgVersion'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::MetaConfig
+      name: '@RJBS/MetaConfig'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::MetaJSON
+      name: '@RJBS/MetaJSON'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::NextRelease
+      name: '@RJBS/NextRelease'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::PodSyntaxTests
+      name: '@RJBS/PodSyntaxTests'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::Repository
+      name: '@RJBS/Repository'
+      version: 0.13
+    -
+      class: Dist::Zilla::Plugin::PodWeaver
+      name: '@RJBS/PodWeaver'
+      version: 3.101530
+    -
+      class: Dist::Zilla::Plugin::Git::Check
+      name: '@RJBS/@Git/Check'
+      version: 1.101330
+    -
+      class: Dist::Zilla::Plugin::Git::Commit
+      name: '@RJBS/@Git/Commit'
+      version: 1.101330
+    -
+      class: Dist::Zilla::Plugin::Git::Tag
+      name: '@RJBS/@Git/Tag'
+      version: 1.101330
+    -
+      class: Dist::Zilla::Plugin::Git::Push
+      name: '@RJBS/@Git/Push'
+      version: 1.101330
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':InstallModules'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':TestFiles'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':ExecFiles'
+      version: 4.101612
+    -
+      class: Dist::Zilla::Plugin::FinderCode
+      name: ':ShareFiles'
+      version: 4.101612
+  zilla:
+    class: Dist::Zilla
+    config:
+      is_trial: 0
+    version: 4.101612

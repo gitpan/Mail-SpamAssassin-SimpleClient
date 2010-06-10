@@ -1,16 +1,56 @@
+
 use strict;
 use warnings;
 
-use inc::Module::Install;
+ BEGIN { require 5.006; } 
 
-name          ('Mail-SpamAssassin-SimpleClient');
-author        ('Ricardo Signes <rjbs@cpan.org>');
-license       ('perl');
-version_from  ('lib/Mail/SpamAssassin/SimpleClient.pm');
+use ExtUtils::MakeMaker 6.31;
 
-requires('Email::MIME'        => 1); # no idea what the minimum version is
-requires('Mail::SpamAssassin' => 3); # no idea what the minimum version is
 
-extra_tests;
 
-WriteAll();
+my %WriteMakefileArgs = (
+  'ABSTRACT' => 'easy client to SpamAssassin\'s spamd',
+  'AUTHOR' => 'Ricardo Signes <rjbs@cpan.org>',
+  'BUILD_REQUIRES' => {
+    'Email::Simple' => '0',
+    'Test::More' => '0'
+  },
+  'CONFIGURE_REQUIRES' => {
+    'ExtUtils::MakeMaker' => '6.31'
+  },
+  'DISTNAME' => 'Mail-SpamAssassin-SimpleClient',
+  'EXE_FILES' => [],
+  'LICENSE' => 'perl',
+  'NAME' => 'Mail::SpamAssassin::SimpleClient',
+  'PREREQ_PM' => {
+    'Carp' => '0',
+    'Email::MIME' => '0',
+    'Mail::SpamAssassin::Client' => '0'
+  },
+  'VERSION' => '0.101610',
+  'test' => {
+    'TESTS' => 't/*.t'
+  }
+);
+
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
+

@@ -1,2 +1,13 @@
-This is the README for Mail-SpamAssassin-SimpleClient.  It provides a simple,
-somewhat naive interface for checking mail against a spamd.
+
+
+This archive contains the distribution Mail-SpamAssassin-SimpleClient,
+version 0.101610:
+
+  easy client to SpamAssassin's spamd
+
+This software is copyright (c) 2010 by Ricardo Signes.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+
